@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python
+  name: app-deploy
 spec:
   selector:
     matchLabels:
@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: python
+        app: app-deploy
     spec:
       containers:
-        - name: python-cont
+        - name: app-deploy-cont
           image: >-
             apache/superset:4.1.2
           ports:
